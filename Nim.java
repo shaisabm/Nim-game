@@ -180,8 +180,8 @@ class Nim {
   }
 
   // Main method to run the Nim game
+  
   public static void main(String[] args) {
-    // Initialize the rows with sticks
     int[] row1 = new int[] { 1 };
     int[] row2 = new int[] { 1, 1, 1 };
     int[] row3 = new int[] { 1, 1, 1, 1, 1 };
@@ -205,6 +205,7 @@ class Nim {
       int rowNum = row.nextInt();
 
       // Player's move on Row 2
+      
       if (rowNum == 2 && Arrays.stream(row2).sum() > 0) {
         row2 = methodRow2(row1, row2, row3, row4);
         player++;
@@ -212,8 +213,6 @@ class Nim {
         for (i = 0; i < list.length; i++) {
           System.out.println(Arrays.toString(list[i]));
         }
-
-        // Computer's move
 
           computer++;
           methodRandom(row1, row2, row3, row4);
