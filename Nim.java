@@ -1,5 +1,7 @@
 // This Java code implements a simple game of Nim. The game involves four rows of sticks, and players take turns removing sticks from a chosen row. The computer also makes moves randomly. The goal is to force the opponent (either human or computer) to take the last stick. The code includes comments explaining each method and the main game loop. To play, select a row and specify the number of sticks to remove when prompted. The game continues until no sticks remain, and the player with the last move lose.
-  
+
+// https://www.archimedes-lab.org/game_nim/play_nim_game.html
+
 import java.util.Arrays;
 import java.util.*;
 import java.util.Random;
@@ -103,7 +105,9 @@ class Nim {
     while (remove > Arrays.stream(row2).sum() || remove <= 0) {
       System.out.println(Arrays.stream(row2).sum() + " sticks available");
       System.out.print("How many sticks do you want to remove?:  ");
-       remove = numOfOnes.nextInt();
+      
+      remove = numOfOnes.nextInt();
+      
       if (remove > Arrays.stream(row2).sum() || remove < 1){
       System.out.println(remove+" can not be remove :(");
       }
